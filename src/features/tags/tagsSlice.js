@@ -26,7 +26,7 @@ const tagSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(fetchTags.fulfilled, (state, action) => {
-                state.isLoading = true;
+                state.isLoading = false;
                 state.tags = action.payload;
             })
             .addCase(fetchTags.rejected, (state, action) => {
